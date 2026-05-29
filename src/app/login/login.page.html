@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>SkeletonAPP</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,3 +11,35 @@
     </ion-toolbar>
   </ion-header>
 </ion-content>
+
+<div id="container">
+  <ion-list>
+    <ion-item>
+      <ion-input 
+        labelPlacement="fixed" 
+        label="Usuario" 
+        placeholder="Ingresar nombre de usuario"
+        [(ngModel)]="user.usuario"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        labelPlacement="fixed" 
+        type="password" 
+        label="Contraseña" 
+        placeholder="Ingresar contraseña"
+        [(ngModel)]="user.password"
+      ></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div style="text-align: right;">
+    <ion-button 
+      slot="end"
+      (click)="ingresar()"
+    >
+      Ingresar
+    </ion-button>
+  </div>
+</div>
